@@ -1,0 +1,279 @@
+/*
+Author: Green Dwarf Tech
+Author URI: https://greendwarftech.com/
+Version: 1.0.0
+*/
+/*CSS Table Of Content Ends Here*/
+
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&amp;display=swap");
+
+:root {
+  --body: #f5f6f8;
+  --black: #000000;
+  --black2: #535353;
+  --white: #fff;
+  --p1-clr: #fb421f;
+  --p2-clr: #3e89ff;
+  --p3-clr: #ff90e7;
+  --p4-clr: #27dab7;
+  --p5-clr: #ffdc26;
+  --blogbox: #efefef;
+  --cmnbg: #f6f2ea;
+  --n100-clr: rgba(235, 243, 246, 1);
+  --n200-clr: rgba(221, 221, 221, 1);
+  --n700-clr: rgba(36, 36, 38, 1);
+  --n800-clr: #535353;
+  --n900-clr: #000000;
+  --theme: rgba(32, 109, 255, 1);
+  --pra: #535353;
+  --cmn-border: #e3e3e3;
+  --pra2: #ddd;
+  --text: #666666;
+  --cmnwhite: #cbcbcc;
+  --star: #ffa336;
+  --theme2: #70a6b1;
+  --header: #090a0b;
+  --text-2: #ffffffcc;
+  --border: #e5e5e5;
+  --border2: #242449;
+  --border3: #5262ff;
+  --bg: #f4eee5;
+  --bg2: #eff5f6;
+  --bg3: #70a6b1;
+  --bg4: #e0e4e9;
+  --bg5: #0e384c;
+  --bg6: #121212;
+  --box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.06);
+}
+
+.header {
+  overflow: hidden;
+  background-color: #f1f1f1;
+  padding: 20px 10px;
+}
+
+/* Style the logo */
+.header .logo {
+  float: left;
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--theme);
+  text-decoration: none;
+  line-height: 30px;
+  padding-top: 5px;
+  font-family: Archivo, sans-serif;
+}
+
+/* Style navigation links */
+.header-right a {
+  float: left;
+  color: #333;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 25px;
+  border-radius: 4px;
+  transition: background 0.3s;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Active/current link */
+.header-right a.active {
+  background-color: var(--bg5);
+  color: #fff;
+}
+
+/* Hover effect */
+.header-right a:hover {
+  background-color: #ddd;
+  color: #222;
+}
+
+/* Align navigation to the right */
+.header-right {
+  float: right;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+  .header a,
+  .header-right a {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+  }
+  .header-right {
+    float: none;
+  }
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #fff;
+  padding-left: 7vw;
+  max-width: 600px;
+  text-align: left;
+}
+
+.hero-content h1 {
+  font-size: 2.8rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: Archivo, sans-serif;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Responsive for mobile */
+@media (max-width: 700px) {
+  .hero-section {
+    height: 50vh;
+  }
+  .hero-content h1 {
+    font-size: 2rem;
+  }
+  .hero-content {
+    padding-left: 5vw;
+  }
+}
+
+
+
+/* Container */
+.contact-section {
+  padding: 24px 16px;
+  background: #f7f9fc;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+}
+
+/* Card */
+.contact-form-content {
+  max-width: 720px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #e6e9ef;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+/* Form layout */
+.contact-form-content form {
+  display: grid;
+  gap: 12px;
+}
+
+/* Fields */
+.contact-form-content input[type="text"],
+.contact-form-content input[type="email"],
+.contact-form-content input[type="number"],
+.contact-form-content textarea {
+  width: 96%;
+  padding: 10px 12px;
+  border: 1px solid #cfd6e2;
+  border-radius: 8px;
+  background: #fff;
+  color: #1f2937;
+  font-size: 14px;
+}
+
+/* Textareas */
+#subject { min-height: 40px; resize: vertical; }
+#message { min-height: 120px; resize: vertical; }
+
+/* Focus */
+.contact-form-content input:focus,
+.contact-form-content textarea:focus {
+  outline: none;
+  border-color: #3b82f6;
+  box-shadow: 0 0 0 2px rgba(59,130,246,0.25);
+}
+
+/* Placeholder */
+.contact-form-content input::placeholder,
+.contact-form-content textarea::placeholder {
+  color: #9aa5b1;
+}
+
+
+/* Simple About layout */
+.about-hero {
+  background: #f5f6f8;
+  padding: 48px 16px;
+}
+.about-content {
+  background: #ffffff;
+  padding: 32px 16px 48px;
+}
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+.about h1 {
+  margin: 0 0 12px;
+  font-size: 2rem;
+}
+.about p {
+  margin: 0 0 16px;
+  color: #535353;
+}
+.about h2 {
+  margin: 28px 0 12px;
+  font-size: 1.25rem;
+}
+.about-list {
+  margin: 0 0 8px 18px;
+  padding: 0;
+}
+.about-list li {
+  margin: 6px 0;
+}
+.about-cta {
+  margin-top: 24px;
+}
+.btn {
+  display: inline-block;
+  padding: 10px 16px;
+  background: #206dff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.btn:hover { opacity: 0.95; }
